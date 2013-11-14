@@ -7,9 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace QueensBookstore {
-    
-    
-    public partial class About {
+namespace QueensBookstore
+{
+
+    public partial class About
+    {
+
     }
 }

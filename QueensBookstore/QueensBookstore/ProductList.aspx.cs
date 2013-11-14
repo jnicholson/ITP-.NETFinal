@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using System.Web.ModelBinding;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using QueensBookstore.Models;
+using System.Web.ModelBinding;
 
 namespace QueensBookstore
 {
@@ -13,6 +13,7 @@ namespace QueensBookstore
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+
         }
 
         public IQueryable<Product> GetProducts(

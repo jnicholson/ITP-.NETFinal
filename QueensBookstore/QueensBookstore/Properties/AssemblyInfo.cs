@@ -8,9 +8,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("QueensBookstore")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("UAFS")]
+[assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("QueensBookstore")]
-[assembly: AssemblyCopyright("Copyright © UAFS 2013")]
+[assembly: AssemblyCopyright("Copyright ©  2013")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("294a7920-c2b6-45c1-b626-9c6eaec9f23d")]
+[assembly: Guid("72769036-9403-4a6d-aeaf-6f74267a0a5a")]
 
 // Version information for an assembly consists of the following four values:
 //

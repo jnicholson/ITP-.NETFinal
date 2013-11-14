@@ -6,7 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using QueensBookstore.Models;
 
-namespace QueenBookstore.Checkout
+namespace QueensBookstore.Checkout
 {
     public partial class CheckoutReview : System.Web.UI.Page
     {

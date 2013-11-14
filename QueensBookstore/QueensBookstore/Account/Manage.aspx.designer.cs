@@ -7,11 +7,13 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace QueensBookstore.Account {
-    
-    
-    public partial class Manage {
-        
+namespace QueensBookstore.Account
+{
+
+
+    public partial class Manage
+    {
+
         /// <summary>
         /// successMessage control.
         /// </summary>
@@ -20,7 +22,7 @@ namespace QueensBookstore.Account {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.PlaceHolder successMessage;
-        
+
         /// <summary>
         /// setPassword control.
         /// </summary>
@@ -29,7 +31,7 @@ namespace QueensBookstore.Account {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.PlaceHolder setPassword;
-        
+
         /// <summary>
         /// password control.
         /// </summary>
@@ -38,7 +40,9 @@ namespace QueensBookstore.Account {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox password;
-        
+
+
+
         /// <summary>
         /// confirmPassword control.
         /// </summary>
@@ -47,7 +51,7 @@ namespace QueensBookstore.Account {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox confirmPassword;
-        
+
         /// <summary>
         /// changePassword control.
         /// </summary>
@@ -56,5 +60,7 @@ namespace QueensBookstore.Account {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.PlaceHolder changePassword;
+
+
     }
 }

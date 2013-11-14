@@ -40,6 +40,7 @@ namespace QueensBookstore.Checkout
                     string PaymentConfirmation = decoder["PAYMENTINFO_0_TRANSACTIONID"].ToString();
                     TransactionId.Text = PaymentConfirmation;
 
+
                     ProductContext _db = new ProductContext();
                     // Get the current order id.
                     int currentOrderId = -1;

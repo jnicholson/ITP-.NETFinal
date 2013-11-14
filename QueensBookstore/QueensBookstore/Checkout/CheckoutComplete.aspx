@@ -1,12 +1,10 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="CheckoutComplete.aspx.cs" Inherits="QueensBookstore.Checkout.CheckoutComplete" %>
-
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="FeaturedContent" runat="server">
     <h1>Checkout Complete</h1>
     <p></p>
-    <h3>Payment Transaction ID:</h3>
-    <asp:Label ID="TransactionId" runat="server"></asp:Label>
+    <h3>Payment Transaction ID:</h3> <asp:Label ID="TransactionId" runat="server"></asp:Label>
     <p></p>
     <h3>Thank You!</h3>
     <p></p>

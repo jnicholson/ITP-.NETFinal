@@ -1,14 +1,14 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.Collections.Specialized;
 using System.Linq;
 using System.Web;
-using System.Web.ModelBinding;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using QueensBookstore.Logic;
 using QueensBookstore.Models;
+using QueensBookstore.Logic;
+using System.Collections.Specialized;
+using System.Collections;
+using System.Web.ModelBinding;
 
 namespace QueensBookstore
 {
@@ -83,6 +83,13 @@ namespace QueensBookstore
         protected void UpdateBtn_Click(object sender, EventArgs e)
         {
             UpdateCartItems();
+        }
+
+        protected void CheckoutBtn_Click(object sender, ImageClickEventArgs e)
+        {
+            ShoppingCartActions usersShoppingCart = new ShoppingCartActions();
+            Session["payment_amt"] = usersShoppingCart.GetTotal();
+            Response.Redirect("Checkout/CheckoutStart.aspx");
         }
 
         protected void CheckoutBtn_Click(object sender, ImageClickEventArgs e)

@@ -7,9 +7,9 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace QueensBookstore {
-    
-    
-    public partial class Contact {
+namespace QueensBookstore
+{
+    public partial class Contact
+    {
     }
 }

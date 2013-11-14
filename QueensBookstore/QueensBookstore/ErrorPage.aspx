@@ -1,11 +1,10 @@
-﻿<%@ Page Title="" Language="C#" AutoEventWireup="true" MasterPageFile="~/Site.Master" CodeBehind="ErrorPage.aspx.cs" Inherits="QueensBookstore.ErrorPage" %>
-
+﻿<%@ Page Title="" Language="C#" AutoEventWireup="true" MasterPageFile="~/Site.Master"  CodeBehind="ErrorPage.aspx.cs" Inherits="QueensBookstore.ErrorPage" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="FeaturedContent" runat="server">
     <h2>Error:</h2>
     <p></p>
-    <asp:Label ID="FriendlyErrorMsg" runat="server" Text="Label" Font-Size="Large" Style="color: red"></asp:Label>
+    <asp:Label ID="FriendlyErrorMsg" runat="server" Text="Label" Font-Size="Large" style="color: red"></asp:Label>
 
     <asp:Panel ID="DetailedErrorPanel" runat="server" Visible="false">
         <p>
@@ -24,7 +23,7 @@
             <asp:Label ID="InnerMessage" runat="server" Font-Bold="true" Font-Size="Large" /><br />
         </p>
         <pre>
-            <asp:Label ID="InnerTrace" runat="server" />
+            <asp:Label ID="InnerTrace" runat="server"  />
         </pre>
     </asp:Panel>
 </asp:Content>

@@ -1,11 +1,11 @@
-﻿<%@ Page Title="Welcome" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="QueensBookstore._Default" %>
+﻿<%@ Page Title="Home" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="QueensBookstore._Default" %>
 
 <asp:Content runat="server" ID="FeaturedContent" ContentPlaceHolderID="FeaturedContent">
     <section class="featured">
         <div class="content-wrapper">
             <hgroup class="title">
                 <h1><%: Title %>.</h1>
-                <h2>Queen's Bookstore can help you find the perfect gift</h2>
+                <h2>Wingtip Toys can help you find the perfect gift</h2>
             </hgroup>
             <p>
                 We're all about transportation toys. You can order 
@@ -17,6 +17,6 @@
 </asp:Content>
 
 <asp:Content runat="server" ID="BodyContent" ContentPlaceHolderID="MainContent">
-    <section style="vertical-align: middle">
+    <section style="alignment-adjust: middle">
     </section>
-</asp:Content>
+</asp:Content> 

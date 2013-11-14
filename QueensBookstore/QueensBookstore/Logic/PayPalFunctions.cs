@@ -1,32 +1,29 @@
 ﻿using System;
 using System.Collections;
-using System.Collections.Generic;
 using System.Collections.Specialized;
-using System.Configuration;
-using System.Data;
 using System.IO;
-using System.Linq;
 using System.Net;
 using System.Text;
+using System.Data;
+using System.Configuration;
 using System.Web;
 using QueensBookstore;
 using QueensBookstore.Models;
+using System.Collections.Generic;
+using System.Linq;
 
 public class NVPAPICaller
 {
     //Flag that determines the PayPal environment (live or sandbox)
     private const bool bSandbox = true;
-
     private const string CVV2 = "CVV2";
 
     // Live strings.
     private string pEndPointURL = "https://api-3t.paypal.com/nvp";
-
     private string host = "www.paypal.com";
 
     // Sandbox strings.
     private string pEndPointURL_SB = "https://api-3t.sandbox.paypal.com/nvp";
-
     private string host_SB = "www.sandbox.paypal.com";
 
     private const string SIGNATURE = "SIGNATURE";
@@ -37,15 +34,14 @@ public class NVPAPICaller
     //Replace <Your API Password> with your API Password
     //Replace <Your Signature> with your Signature
     public string APIUsername = "jnicho01-facilitator_api1.g.uafs.edu";
-
     private string APIPassword = "1384040033";
     private string APISignature = "AYp54oUtf2xB6PyfRTTMsaQjcEfRA-Gmj1HBvuvp5EWJDC87IaoF3TQM";
     private string Subject = "";
     private string BNCode = "PP-ECWizard";
 
-    //HttpWebRequest Timeout specified in milliseconds
-    private const int Timeout = 15000;
 
+    //HttpWebRequest Timeout specified in milliseconds 
+    private const int Timeout = 15000;
     private static readonly string[] SECURED_NVPS = new string[] { ACCT, CVV2, SIGNATURE, PWD };
 
     public void SetCredentials(string Userid, string Pwd, string Signature)
@@ -63,14 +59,14 @@ public class NVPAPICaller
             host = host_SB;
         }
 
-        string returnURL = "http://localhost:54529/Checkout/CheckoutReview.aspx";
-        string cancelURL = "http://localhost:54529/Checkout/CheckoutCancel.aspx";
+        string returnURL = "http://localhost:4671/Checkout/CheckoutReview.aspx";
+        string cancelURL = "http://localhost:4671/Checkout/CheckoutCancel.aspx";
 
         NVPCodec encoder = new NVPCodec();
         encoder["METHOD"] = "SetExpressCheckout";
         encoder["RETURNURL"] = returnURL;
         encoder["CANCELURL"] = cancelURL;
-        encoder["BRANDNAME"] = "Queen's Bookstore Sample Application";
+        encoder["BRANDNAME"] = "Wingtip Toys Sample Application";
         encoder["PAYMENTREQUEST_0_AMT"] = amt;
         encoder["PAYMENTREQUEST_0_ITEMAMT"] = amt;
         encoder["PAYMENTREQUEST_0_PAYMENTACTION"] = "Sale";

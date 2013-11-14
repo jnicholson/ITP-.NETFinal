@@ -1,27 +1,25 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Optimization;
 using System.Web.Routing;
-
-using System.Web.Routing;
-
 using System.Web.Security;
 using QueensBookstore;
+using System.Data.Entity;
 using QueensBookstore.Models;
+using System.Web.Routing;
 
 namespace QueensBookstore
 {
     public class Global : HttpApplication
     {
-        private void Application_Start(object sender, EventArgs e)
+        void Application_Start(object sender, EventArgs e)
         {
             // Code that runs on application startup
             BundleConfig.RegisterBundles(BundleTable.Bundles);
             AuthConfig.RegisterOpenAuth();
-            Database.SetInitializer(new ProductDatabaseInitializer());
+            Database.SetInitializer<ProductContext>(new ProductDatabaseInitializer());
 
             // Add Administrator.
             if (!Roles.RoleExists("Administrator"))
@@ -38,7 +36,7 @@ namespace QueensBookstore
             RegisterRoutes(RouteTable.Routes);
         }
 
-        private void RegisterRoutes(RouteCollection routes)
+        void RegisterRoutes(RouteCollection routes)
         {
             routes.MapPageRoute(
                 "HomeRoute",
@@ -73,13 +71,16 @@ namespace QueensBookstore
             );
         }
 
-        private void Application_End(object sender, EventArgs e)
+        void Application_End(object sender, EventArgs e)
         {
             //  Code that runs on application shutdown
+
         }
 
-        private void Application_Error(object sender, EventArgs e)
+        void Application_Error(object sender, EventArgs e)
         {
+            // Code that runs when an unhandled error occurs.
+
             // Get last error from the server
             Exception exc = Server.GetLastError();
 

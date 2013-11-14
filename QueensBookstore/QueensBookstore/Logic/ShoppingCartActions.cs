@@ -16,7 +16,7 @@ namespace QueensBookstore.Logic
 
         public void AddToCart(int id)
         {
-            // Retrieve the product from the database.
+            // Retrieve the product from the database.           
             ShoppingCartId = GetCartId();
 
             var cartItem = _db.ShoppingCartItems.SingleOrDefault(
@@ -24,7 +24,7 @@ namespace QueensBookstore.Logic
                 && c.ProductId == id);
             if (cartItem == null)
             {
-                // Create a new cart item if no cart item exists.
+                // Create a new cart item if no cart item exists.                 
                 cartItem = new CartItem
                 {
                     ItemId = Guid.NewGuid().ToString(),
@@ -40,8 +40,8 @@ namespace QueensBookstore.Logic
             }
             else
             {
-                // If the item does exist in the cart,
-                // then add one to the quantity.
+                // If the item does exist in the cart,                  
+                // then add one to the quantity.                 
                 cartItem.Quantity++;
             }
             _db.SaveChanges();
@@ -57,7 +57,7 @@ namespace QueensBookstore.Logic
                 }
                 else
                 {
-                    // Generate a new random GUID using System.Guid class.
+                    // Generate a new random GUID using System.Guid class.     
                     Guid tempCartId = Guid.NewGuid();
                     HttpContext.Current.Session[CartSessionKey] = tempCartId.ToString();
                 }
@@ -76,9 +76,9 @@ namespace QueensBookstore.Logic
         public decimal GetTotal()
         {
             ShoppingCartId = GetCartId();
-            // Multiply product price by quantity of that product to get
-            // the current price for each of those products in the cart.
-            // Sum all product price totals to get the cart total.
+            // Multiply product price by quantity of that product to get        
+            // the current price for each of those products in the cart.  
+            // Sum all product price totals to get the cart total.   
             decimal? total = decimal.Zero;
             total = (decimal?)(from cartItems in _db.ShoppingCartItems
                                where cartItems.CartId == ShoppingCartId
@@ -179,7 +179,7 @@ namespace QueensBookstore.Logic
             {
                 _db.ShoppingCartItems.Remove(cartItem);
             }
-            // Save changes.
+            // Save changes.             
             _db.SaveChanges();
         }
 
@@ -187,11 +187,11 @@ namespace QueensBookstore.Logic
         {
             ShoppingCartId = GetCartId();
 
-            // Get the count of each item in the cart and sum them up
+            // Get the count of each item in the cart and sum them up          
             int? count = (from cartItems in _db.ShoppingCartItems
                           where cartItems.CartId == ShoppingCartId
                           select (int?)cartItems.Quantity).Sum();
-            // Return 0 if all entries are null
+            // Return 0 if all entries are null         
             return count ?? 0;
         }
 

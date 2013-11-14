@@ -61,7 +61,7 @@ namespace QueensBookstore.Account
             }
 
             // Build the redirect url for OpenAuth verification
-            var redirectUrl = "~/Account/RegisterExternalLogin.aspx";
+            var redirectUrl = "~/Account/RegisterExternalLogin";
             var returnUrl = Request.QueryString["ReturnUrl"];
             if (!String.IsNullOrEmpty(returnUrl))
             {

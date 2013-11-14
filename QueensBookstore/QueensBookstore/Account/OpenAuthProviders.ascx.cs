@@ -1,7 +1,7 @@
-﻿using Microsoft.AspNet.Membership.OpenAuth;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Web;
+using Microsoft.AspNet.Membership.OpenAuth;
 
 namespace QueensBookstore.Account
 {
@@ -9,6 +9,7 @@ namespace QueensBookstore.Account
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+
             if (IsPostBack)
             {
                 var provider = Request.Form["provider"];
@@ -17,7 +18,7 @@ namespace QueensBookstore.Account
                     return;
                 }
 
-                var redirectUrl = "~/Account/RegisterExternalLogin.aspx";
+                var redirectUrl = "~/Account/RegisterExternalLogin";
                 if (!String.IsNullOrEmpty(ReturnUrl))
                 {
                     var resolvedReturnUrl = ResolveUrl(ReturnUrl);
@@ -28,11 +29,15 @@ namespace QueensBookstore.Account
             }
         }
 
+
+
         public string ReturnUrl { get; set; }
+
 
         public IEnumerable<ProviderDetails> GetProviderNames()
         {
             return OpenAuth.AuthenticationClients.GetAll();
         }
+
     }
 }

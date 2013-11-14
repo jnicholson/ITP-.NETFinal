@@ -7,11 +7,13 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace QueensBookstore.Account {
-    
-    
-    public partial class Register {
-        
+namespace QueensBookstore.Account
+{
+
+
+    public partial class Register
+    {
+
         /// <summary>
         /// RegisterUser control.
         /// </summary>
@@ -20,7 +22,7 @@ namespace QueensBookstore.Account {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.CreateUserWizard RegisterUser;
-        
+
         /// <summary>
         /// RegisterUserWizardStep control.
         /// </summary>
